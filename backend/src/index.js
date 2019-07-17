@@ -16,7 +16,7 @@ mongoose.connect('mongodb+srv://admin:admin@cluster0-pty3v.mongodb.net/test?retr
 //middleware::interceptador
 app.use((req, res) => {
     req.io = io;
-    next();
+    req.next();
 });
 
 app.use(cors());
